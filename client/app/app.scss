@@ -21,6 +21,20 @@ $fa-font-path: '/assets/fonts/font-awesome/';
     position: fixed;
     width: 100%;
 }
+#footer{
+	position: fixed;
+    bottom: -20px;
+    left: 0px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px #333;
+}
+#pager{
+	position: absolute;
+	right: 0px;
+	top: 10px;
+	right: 40px;
+}
 // Component styles are injected through gulp
 /* inject:scss */
 @import 'admin/admin';
@@ -52,10 +66,13 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 .p_T-6x {
     padding-top: 60px;
 }
+
 .p_B-2x {
     padding-bottom: 40px;
 }
-
+.p_B-8x{
+	padding-bottom: 80px;
+}
 .p_All {
     padding: 10px;
 }

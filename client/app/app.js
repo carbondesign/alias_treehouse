@@ -26,6 +26,7 @@ import main from './main/main.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 import socket from '../components/socket/socket.service';
+import codeEditor from './components/codeeditor/codeeditor.component'
 
 import './app.scss';
 
@@ -33,7 +34,7 @@ angular.module('aliaApp', [
     ngAnimate,
     ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter, uiBootstrap,
     // ngMessages,
-
+    codeEditor,
     // ngValidationMatch,
     _Auth, account, admin, navbar, footer, main, constants, socket, util
   ])
