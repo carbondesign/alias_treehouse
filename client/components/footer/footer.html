@@ -1,4 +1,10 @@
 <div id="footer">
 	<codeeditor></codeeditor>
-    <ul uib-pager total-items="totalItems" class='pull-right' id="pager" ng-model="currentPage"></ul>
+    <ul id="pager" class=" pull-right pagination-sm pagination">
+    	<li><a href="" ng-click="selectPage(page - 1, $event)" ng-disabled>Previous</a></li>
+    	<li ng-repeat="item in $ctrl.totalItems" class="pagination-page" ng-click="">
+    		<a ui-sref="{{'page' + item}}">{{item}}</a>
+    	</li>
+    	<li><a href="" ng-click="selectPage(page + 1, $event)">Next</a></li>
+    </ul>
 </div>
