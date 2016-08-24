@@ -3,14 +3,12 @@
     font-size: 1em;
     padding: 20px;
     position: relative;
-    height: 100%;
-    .comic-inner-panel{
-
-		&:after {
+    min-height: 100%;
+    width: 100%;
+    &:after {
 		    border: 0.1em solid transparent;
 		    border-image: url('http://emptyeasel.com/wp-content/uploads/2012/11/creatingtexture2-carrielewis.jpg') 0 27 27 27 round stretch;
-		    /*border-radius: 0.25em 0.10em 0.5em 0.25em;*/
-		    // transform: rotate(-1deg);
+
 		    content: '';
 		    top: 0px;
 		    left: 0px;
@@ -21,15 +19,19 @@
 		&:before {
 		    border-top: 0.1em solid transparent;
 		    border-image: url('http://emptyeasel.com/wp-content/uploads/2012/11/creatingtexture2-carrielewis.jpg') 27 0 0 0 stretch round;
-		    /*border-radius: 1.5em;*/
 		    content: '';
 		    height: 3em;
 		    left: 0;
 		    top: 0;
-		    // transform: rotate(-1deg);
 		    width: 100%;
 		    position: absolute;
 		}
+    .comic-inner-panel{
+		position: absolute;
+		width: 100%;
+		width: 100%;
+		z-index: 2;
+
     }
 
 }

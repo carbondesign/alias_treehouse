@@ -13,11 +13,7 @@ export default angular.module('aliaApp.comicpanel', [])
 		template: require('./comicPanel.html'),
 		selector: 'comicpanel',
 		transclude: true,
-		// transclude: {
-		// 	text: 'p'
-		// },
-		// inputs: ['paneltext'],
-		// bindings: { paneltext: '<' },
+		replace: true,
 		controller: comicPanelComponent
 	})
 	.name;
