@@ -27,7 +27,7 @@ import constants from './app.constants';
 import util from '../components/util/util.module';
 import socket from '../components/socket/socket.service';
 import codeEditor from './components/codeeditor/codeeditor.component'
-
+import pages from './pages';
 import './app.scss';
 
 angular.module('aliaApp', [
@@ -36,7 +36,7 @@ angular.module('aliaApp', [
     // ngMessages,
     codeEditor,
     // ngValidationMatch,
-    _Auth, account, admin, navbar, footer, main, constants, socket, util
+    _Auth, account, pages, admin, navbar, footer, main, constants, socket, util
   ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
@@ -50,7 +50,10 @@ angular.module('aliaApp', [
         }
       });
     });
-  });
+  })
+  .controller('pagerCtrl', ['', function(){
+
+  }]);
 
 angular.element(document)
   .ready(() => {
