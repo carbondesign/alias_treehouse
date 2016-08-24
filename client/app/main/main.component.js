@@ -5,6 +5,7 @@ import routing from './main.routes';
 import comicPanel from '../components/comicPanel/comicPanel.component';
 import codeEditor from '../components/codeeditor/codeeditor.component';
 import talkbubble from '../components/talkbubble/talkbubble.component';
+import glassTransition from '../components/glassTransition/glassTransition.directive';
 
 export class MainController {
 
@@ -16,7 +17,7 @@ export class MainController {
 
 }
 
-export default angular.module('aliaApp.main', [uiRouter, comicPanel, codeEditor, talkbubble])
+export default angular.module('aliaApp.main', [uiRouter, comicPanel, codeEditor, talkbubble, glassTransition])
     .config(routing)
     .component('main', {
         template: require('./main.html'),

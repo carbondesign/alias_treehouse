@@ -1,23 +1,27 @@
 <div class='container p_T-6x p_B-8x'>
-    <comicpanel class="col-lg-6 h_8x p_B-2x">
+    <comicpanel class="col-lg-6 h_6x p_B-2x">
         <talkbubble>
-        	Hi, My name is Alia. What's yours?
+        	Hi, My name is Alia. What's your name?
         </talkbubble>
         <talkbubble>
-			Cool. Glad there is another kid around here. I normally spend the summer in New York with my friend but my grades weren't that great so my mom sent me here to stay with my Uncle. Is Savannah always this hot?
-        </talkbubble>
-        <talkbubble>Alia, time for lunch.</talkbubble>
-        <talkbubble>
-        	<form action="" ng-submit="">
         	<input type="text" placeholder="type your name" ng-model="user.name" value="test"/>
-        	<button>Test buttin</button>
-        	</form>
+        	<button><i class="fa fa-comment-o"></i></button>
         </talkbubble>
+        <talkbubble user="$ctrl.user">
+			Hi {{$ctrl.user.name}} Glad there is another kid around here. I normally spend the summer in New York with my friend but my grades weren't that great so my mom sent me here to stay with my Uncle. Is Savannah always this hot?
+        </talkbubble>
+        Broad view of Alia sitting at the base of tree, house in the distance
     </comicpanel>
     <comicpanel class="col-lg-6 h_2x p_B-2x">
-        <p>this is content</p>
+        <talkbubble>Alia, time for lunch.</talkbubble>
+         <talkbubble>Want to come?</talkbubble>
+         goning through a side door
     </comicpanel>
-    <comicpanel class="col-lg-6 h_2x p_B-2x">
-        <p>this is content</p>
+    <comicpanel class="col-lg-6 h_4x p_B-2x">
+        <talkbubble>Uncle Malachi is a software engineer. He's really smart, but he can be funny sometimes too. Come in, I'll get you a drink.</talkbubble>
+        Malachi in the distance, Alia getting opening a fridge
+        <glass-transition>
+			<img src="../../../assets/images/glass.png" alt="">
+        </glass-transition>
     </comicpanel>
 </div>
