@@ -9,11 +9,6 @@ import glassTransition from '../components/glassTransition/glassTransition.direc
 
 export class MainController {
 
-    /*@ngInject*/
-    constructor($http, $scope, socket) {
-
-    }
-
 
 }
 
