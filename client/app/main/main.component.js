@@ -6,13 +6,14 @@ import comicPanel from '../components/comicPanel/comicPanel.component';
 import codeEditor from '../components/codeeditor/codeeditor.component';
 import talkbubble from '../components/talkbubble/talkbubble.component';
 import fadeTransition from '../components/fadeTransition/fadeTransition.directive';
+import sequentialTransition from '../components/sequentialTransition/sequentialTransition.directive';
 
 export class MainController {
 
 
 }
 
-export default angular.module('aliaApp.main', [uiRouter, comicPanel, codeEditor, talkbubble, fadeTransition])
+export default angular.module('aliaApp.main', [uiRouter, comicPanel, codeEditor, talkbubble, sequentialTransition, fadeTransition])
     .config(routing)
     .component('main', {
         template: require('./main.html'),

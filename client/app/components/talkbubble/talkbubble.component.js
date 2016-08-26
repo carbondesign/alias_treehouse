@@ -18,7 +18,8 @@ export default angular.module('aliaApp.talkbubble', [])
 			    height: '=',
 			    top: '=',
 			    left: '=',
-			    tail: '='
+			    tail: '=',
+			    zindex: '@'
 			}
         };
     })

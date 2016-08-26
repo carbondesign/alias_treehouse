@@ -1,4 +1,4 @@
-<section class='container p_T-6x'>
+<section class='container p_T-6x  p_B'>
     <comicpanel class="col-lg-6 h_6x p_B-2x">
         <talkbubble top='200', left='160' width='100' height='80' tail='left'>
         	Hi little guy, What's your name?
@@ -24,7 +24,7 @@
         <talkbubble top='0', left='0' width='' height='' tail=''>Oh don't worry. That's Grandpop Niven,  He's really nice but since grandma passed he's been a bit "cray-cray". Come on in, I'll get you some milk.</talkbubble>
          going through a side door
     </comicpanel>
-    <comicpanel class="col-lg-6 h_4x p_B-2x">
+    <comicpanel class="col-lg-6 h_2x p_B-2x">
 
         Niven in the distance, Alika getting opening a fridge
 
@@ -33,31 +33,40 @@
         </fade-transition>
     </comicpanel>
 </section>
-<section class='container'  ng-show='pg1.show.afterMilk'>
+<section class='container p_B'  ng-show='pg1.show.afterMilk'>
 	<comicpanel class="col-lg-4 h_3x p_B-4x">
 		<talkbubble top='0', left='0' width='' height='' tail=''>
-			Ah, your back...and you brought a friend! Hurry up and eat your lunch, we gotta get goin' if we want to get anything done before dark.
+			Ah, your back...and you brought a friend! Hurry up and eat your lunch, we're late!.
 		</talkbubble>
-		[eat me interactive]
+		<sequential-transition>
+			<img src="../../../assets/images/sandwich1.svg" alt="">
+        </sequential-transition>
 	</comicpanel>
 	<comicpanel class="col-lg-8 h_3x p_B-4x">
 		Alika and Niven are loaded up with tools, wood. grab a wheel barrow (interactive) and have to move it across the frame to show the next frame.
-		<talkbubble top='0', left='0' width='' height='' tail=''>
+		<talkbubble top='50', left='0' width='' height='' tail='' zindex='2'>
 			Where are we going?
 		</talkbubble>
-		<talkbubble top='0', left='0' width='' height='' tail=''>To build a tree house! Hurry it up we're late! Grab your laptop!</talkbubble>
+		<talkbubble top='0', left='50' width='' height='' tail=''>To build a tree house! Hurry it up we're late! Grab your laptop!</talkbubble>
 	</comicpanel>
 </section>
-<section  class='container p_B-8x'  ng-show='pg1.show.afterSandwich'>
+<section  class='container p_B'  ng-show='pg1.show.afterSandwich'>
 	<comicpanel class="col-lg-6 h_6x p_B-4x">
 		<talkbubble top='0', left='0' width='' height='' tail=''>
 			Grandpop, you don't know how to build a tree house! Who taught you to build a tree house?
 		</talkbubble>
 		<talkbubble top='0', left='0' width='' height='' tail=''>
-			Alika, if there's three things I've learned in life it's that "Don't ever wait for someone to teach you nothin'." You have more learning in that laptop than you will ever need. And 2.) If you have an idea of something, learn how to do it yourself." Most folks think that their ideas are as valuable as gold and go around dropping them like silent, stinkers. It's just hot air! Real ain't real till it's real and no one going to help you make your stinkers real.
+			Alika, if there's three things I've learned in life it's that "Don't ever wait for someone to teach you nothin'." You have more learning in that laptop than you will ever need.
 		</talkbubble>
+
+	</comicpanel>
+	<comicpanel class="col-lg-6 h_4x p_B-4x">
+		<talkbubble>And 2.) If you have an idea of something, learn how to do it yourself." Most folks think that their ideas are as valuable as gold and go around dropping them like "silent stinkers". It's just hot air! Real ain't real till it's real and trust me, no one going to help you make your stinkers real.</talkbubble>
+	</comicpanel>
+	<comicpanel class="col-lg-6 h_2x p_B-4x">
 		[Looks incrdulous]
 		<talkbubble top='0', left='0' width='' height='' tail=''>What's the third thing?</talkbubble>
 		<talkbubble top='0', left='0' width='' height='' tail=''>Don't fart in public.</talkbubble>
 	</comicpanel>
+	<a href="../page_2"><h2>Chapter 1: The Foundation</h2></a>
 </section>

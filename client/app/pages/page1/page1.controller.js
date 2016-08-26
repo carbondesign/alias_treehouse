@@ -24,4 +24,8 @@ export default class Page1Controller {
     	console.log("milk");
     	this.show.afterMilk = true;
     }
+    clickSandwich(){
+    	console.log("milk");
+    	this.show.afterSandwich = true;
+    }
 }
