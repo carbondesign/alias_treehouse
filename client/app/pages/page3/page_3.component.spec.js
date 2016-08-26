@@ -1,14 +1,14 @@
 'use strict';
 
-describe('Component: Page1Component', function() {
+describe('Component: Page3Component', function() {
 	// load the controller's module
-	beforeEach(module('aliaApp.page_1'));
+	beforeEach(module('aliaApp.page_3'));
 
-	var Page1Component;
+	var Page3Component;
 
 	// Initialize the controller and a mock scope
 	beforeEach(inject(function($componentController) {
-		Page1Component = $componentController('page1', {});
+		Page3Component = $componentController('page3', {});
 	}));
 
 	it('should ...', function() {

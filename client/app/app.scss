@@ -44,16 +44,27 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 /* inject:scss */
 
 @import 'admin/admin';
+
 @import 'components/codeeditor/codeeditor';
+
 @import 'components/comicPanel/comicPanel';
+
+@import 'components/fadeTransition/fadeTransition';
+
 @import 'components/talkbubble/talkbubble';
-@import 'components/glassTransition/glassTransition';
+
 @import 'main/main';
-@import 'pages/page_1/page_1';
-@import 'pages/page_2/page_2';
-@import 'pages/page_3/page_3';
+
+@import 'pages/page1/page1';
+
+@import 'pages/page2/page2';
+
+@import 'pages/page3/page3';
+
 @import '../components/footer/footer';
+
 @import '../components/modal/modal';
+
 @import '../components/oauth-buttons/oauth-buttons';
 
 /* endinject */

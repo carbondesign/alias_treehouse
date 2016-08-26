@@ -1,8 +1,8 @@
 'use strict';
 
-export default class Page1Component {
+export default class Page3Component {
     /*@ngInject*/
-    constructor($scope, $stateParams) {
+    constructor() {
         this.message = 'Hello';
         console.log($stateParams)
     }

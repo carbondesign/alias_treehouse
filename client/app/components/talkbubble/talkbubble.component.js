@@ -3,9 +3,6 @@ const angular = require('angular');
 
 export class talkbubbleComponent {
     /*@ngInject*/
-    constructor() {
-        console.log('here talk')
-    }
 }
 
 export default angular.module('aliaApp.talkbubble', [])
@@ -13,12 +10,15 @@ export default angular.module('aliaApp.talkbubble', [])
         return {
             template: require('./talkbubble.html'),
             restrict: 'E',
-            selector: 'talkbubble',
             transclude: true,
             replace: true,
-            controller: talkbubbleComponent,
-            bindings: {
-			    user: '='
+            scope: {
+			    user: '=',
+			    width: '=',
+			    height: '=',
+			    top: '=',
+			    left: '=',
+			    tail: '='
 			}
         };
     })

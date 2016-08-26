@@ -1,16 +1,15 @@
 'use strict';
 const angular = require('angular');
 
-export default angular.module('aliaApp.glassTransition', [])
-    .directive('glassTransition', function() {
+export default angular.module('aliaApp.fadeTransition', [])
+    .directive('fadeTransition', function() {
         return {
-            template: require('./glassTransition.html'),
+            template: require('./fadeTransition.html'),
             restrict: 'EA',
             replace: true,
-            // selector: 'glasstransition',
             transclude: true,
             link: function(scope, element, attrs) {
-            	console.log('here glasw')
+
             }
         };
     })
