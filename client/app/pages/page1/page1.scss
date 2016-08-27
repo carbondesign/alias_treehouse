@@ -1,0 +1,35 @@
+ .fadeItem {}
+
+ .fadeInOut {
+     opacity: 1;
+     transition: all linear 2s;
+ }
+
+ .fadeInOut.ng-hide {
+     opacity: 0;
+ }
+
+.sequence{
+	opacity: 1;
+	position: absolute;
+}
+.sequence-poster{
+	position: absolute;
+}
+.sequence.ng-enter{
+	opacity: 0;
+	transition: all linear 0.2s;
+
+}
+
+.sequence.ng-leave {
+  transition:0.5s linear all;
+  opacity:1;
+}
+.sequence.ng-leave.ng-leave-active {
+  opacity:0;
+}
+.sequence.ng-enter-stagger{
+	transition-delay: 0.2s;
+  	animation-delay: 0.2s;
+}

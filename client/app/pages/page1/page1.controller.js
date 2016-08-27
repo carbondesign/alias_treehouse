@@ -8,24 +8,43 @@ export default class Page1Controller {
             name: null
         }
         this.show = {
-        	userName : true,
-        	afterMilk : false,
-        	afterSandwich : false
+            userName: true,
+            afterMilk: true,
+            afterSandwich: true
         }
+        this.html = '<html></html>'
+
+
 
     }
-    meow () {
+    meow() {
         console.log('click')
         this.user.name = "meow";
-        this.show.userName = false;
+        this.show.userName = !this.show.userName;
         return
     }
-    clickMilk(){
-    	console.log("milk");
-    	this.show.afterMilk = true;
+    clickMilk() {
+        this.show.afterMilk = !this.show.afterMilk;
     }
-    clickSandwich(){
-    	console.log("milk");
-    	this.show.afterSandwich = true;
+    clickSandwich() {
+        this.show.afterSandwich = !this.show.afterSandwich;
+    }
+    imageSource() {
+        var imageArray = [];
+
+        for (var i = 1; i < 9; i++) {
+            imageArray.push("../../../assets/images/milk" + i + ".png");
+        }
+
+        return imageArray
+    }
+    sandwichSource() {
+        var imageArray = [];
+
+        for (var i = 1; i < 5; i++) {
+            imageArray.push("../../../assets/images/sandwich" + i + ".svg");
+        }
+
+        return imageArray
     }
 }

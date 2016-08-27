@@ -1,5 +1,6 @@
-<section class='container p_T-6x  p_B'>
+<section class='container p_T-6x  p_B-8x'>
     <comicpanel class="col-lg-6 h_6x p_B-2x">
+
         <talkbubble top='200', left='160' width='100' height='80' tail='left'>
         	Hi little guy, What's your name?
         </talkbubble>
@@ -10,57 +11,80 @@
 			<span ng-hide='pg1.show.userName'>{{pg1.user.name}}</span>
         </talkbubble>
         <talkbubble	ng-hide='pg1.show.userName'>Ok, how about "Charles" then? </talkbubble>
-
-        Broad view of Alika sitting at the base of tree, house in the distance
     </comicpanel>
-    <comicpanel class="col-lg-6 h_2x p_B-2x">
-    	<talkbubble top='0', left='280' width='' height='' tail=''>
+
+    <comicpanel class="col-lg-6 h_2x p_B-2x background-image ">
+    	<div class="full-image" style=" width:535px; height: 176px;" >
+    		<img src="../../../assets/images/newyork.png" alt="">
+    	</div>
+    	<img src="../../../assets/images/a_sitting.png" alt="" style="height: 220px; position: absolute; z-index: 1; top:-8px">
+
+    	<talkbubble top='0', left='150' width='170' height='' tail=''>
 			I'm from <em>New York</em> but instead of hanging out with my friends this summer, mom sent me here.
         </talkbubble>
-
-        <talkbubble top='0', left='0' width='' height='' tail=''>Alika, time for lunch.</talkbubble>
+        <talkbubble top='0', left='330' width='' height='' tail=''>Alika, time for lunch.</talkbubble>
     </comicpanel>
-    <comicpanel class="col-lg-6 h_2x p_B-2x">
-        <talkbubble top='0', left='0' width='' height='' tail=''>Oh don't worry. That's Grandpop Niven,  He's really nice but since grandma passed he's been a bit "cray-cray". Come on in, I'll get you some milk.</talkbubble>
-         going through a side door
+
+    <comicpanel class="col-lg-6 h_4x p_B-2x background-image ">
+
+        <talkbubble top='70', left='200' width='300' height='' tail=''>Oh don't worry. That's Grandpop Niven,  He's really nice but since grandma passed he's been a little "cray-cray". Come on in, I'll get you some milk.</talkbubble>
+        <div class="full-image" style=" width:535px; height: 375px;  z-index:-1">
+        	<img src="../../../assets/images/sidedoor.png" alt="" style="margin-top: -11px;">
+        </div>
     </comicpanel>
-    <comicpanel class="col-lg-6 h_2x p_B-2x">
 
-        Niven in the distance, Alika getting opening a fridge
-
-        <fade-transition>
-			<img src="../../../assets/images/milk.png" alt="">
+    <comicpanel class="col-lg-6 h_4x p_B-2x background-image">
+		<div class="full-image" style=" width:535px; height: 377px;">
+			<img src="../../../assets/images/fridge.png" alt="" style="margin-top:-45px" >
+		</div>
+        <fade-transition style="bottom: -385px; right:-45px">
+        	<img class="sequence-poster" src="../../../assets/images/milk1.png" alt="">
+        	<img ng-if="!pg1.show.afterMilk" class="sequence" ng-repeat="source in pg1.imageSource()" src="{{source}}" alt="">
+        	<button ng-click = "pg1.clickMilk()">Drink Me</button>
         </fade-transition>
+
     </comicpanel>
-</section>
-<section class='container p_B'  ng-show='pg1.show.afterMilk'>
-	<comicpanel class="col-lg-4 h_3x p_B-4x">
-		<talkbubble top='0', left='0' width='' height='' tail=''>
+	<comicpanel  ng-hide='pg1.show.afterMilk' class="col-lg-6 h_4x p_B-2x " >
+		<talkbubble top='0', left='0' width='200' height='' tail=''>
 			Ah, your back...and you brought a friend! Hurry up and eat your lunch, we're late!.
 		</talkbubble>
-		<sequential-transition>
-			<img src="../../../assets/images/sandwich1.svg" alt="">
-        </sequential-transition>
+
+		<fade-transition style="bottom:-408px; right:360px; height:150px">
+        	<img class="sequence-poster"src="../../../assets/images/sandwich1.svg" alt="">
+        	<img ng-if="!pg1.show.afterSandwich" class="sequence" ng-repeat="source in pg1.sandwichSource()" src="{{source}}" alt="">
+        	<button ng-click = "pg1.clickSandwich()">Eat Me</button>
+        </fade-transition>
+        <div class="full-image" style=" width:535px; height: 350px; z-index:-2">
+        	<img src="../../../assets/images/n_tools.png" alt="">
+        </div>
+
 	</comicpanel>
-	<comicpanel class="col-lg-8 h_3x p_B-4x">
-		Alika and Niven are loaded up with tools, wood. grab a wheel barrow (interactive) and have to move it across the frame to show the next frame.
+</section>
+
+<section class='container p_B fadeInOut' ng-hide='pg1.show.afterSandwich' >
+
+	<comicpanel class="col-lg-12 h_3x p_B-2x background-image " style="margin-top:-70px">
+
 		<talkbubble top='50', left='0' width='' height='' tail='' zindex='2'>
 			Where are we going?
 		</talkbubble>
 		<talkbubble top='0', left='50' width='' height='' tail=''>To build a tree house! Hurry it up we're late! Grab your laptop!</talkbubble>
+		<div class="full-image" style="width: 357px; height: 377px; z-index:-2">
+			<img src="../../../assets/images/wheelbarrow.png" alt="">
+		</div>
 	</comicpanel>
 </section>
-<section  class='container p_B'  ng-show='pg1.show.afterSandwich'>
-	<comicpanel class="col-lg-6 h_6x p_B-4x">
+
+<section  class='container p_B'  ng-hide='pg1.show.afterSandwich'>
+	<comicpanel class="col-lg-6 h_3x p_B-2x background-image " style="background: url('../../../assets/images/n_tools.png') no-repeat top left transparent;">
 		<talkbubble top='0', left='0' width='' height='' tail=''>
-			Grandpop, you don't know how to build a tree house! Who taught you to build a tree house?
+			Grandpop, what'd you know about buildin' a tree house! No one taught you build to build no tree house.
 		</talkbubble>
 		<talkbubble top='0', left='0' width='' height='' tail=''>
 			Alika, if there's three things I've learned in life it's that "Don't ever wait for someone to teach you nothin'." You have more learning in that laptop than you will ever need.
 		</talkbubble>
-
 	</comicpanel>
-	<comicpanel class="col-lg-6 h_4x p_B-4x">
+	<comicpanel class="col-lg-6 h_3x p_B-2x background-image " style="background: url('../../../assets/images/a_hammer.png') no-repeat top left transparent;">
 		<talkbubble>And 2.) If you have an idea of something, learn how to do it yourself." Most folks think that their ideas are as valuable as gold and go around dropping them like "silent stinkers". It's just hot air! Real ain't real till it's real and trust me, no one going to help you make your stinkers real.</talkbubble>
 	</comicpanel>
 	<comicpanel class="col-lg-6 h_2x p_B-4x">

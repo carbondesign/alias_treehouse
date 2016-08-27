@@ -14,6 +14,10 @@ export default angular.module('aliaApp.comicpanel', [])
 		selector: 'comicpanel',
 		transclude: true,
 		replace: true,
-		controller: comicPanelComponent
+		controller: comicPanelComponent,
+		bindings: {
+			backgrounds: '='
+		}
+
 	})
 	.name;

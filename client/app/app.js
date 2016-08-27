@@ -14,7 +14,7 @@ import uiBootstrap from 'angular-ui-bootstrap';
 
 
 import {
-  routeConfig
+    routeConfig
 } from './app.config';
 
 import _Auth from '../components/auth/auth.module';
@@ -31,33 +31,33 @@ import pages from './pages';
 import './app.scss';
 
 angular.module('aliaApp', [
-    ngAnimate,
-    ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter, uiBootstrap,
-    // ngMessages,
-    codeEditor,
-    // ngValidationMatch,
-    _Auth, account, pages, admin, navbar, footer, main, constants, socket, util
-  ])
-  .config(routeConfig)
-  .run(function($rootScope, $location, Auth) {
-    'ngInject';
-    // Redirect to login if route requires auth and you're not logged in
+        ngAnimate,
+        ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter, uiBootstrap,
+        // ngMessages,
+        codeEditor,
+        // ngValidationMatch,
+        _Auth, account, pages, admin, navbar, footer, main, constants, socket, util
+    ])
+    .config(routeConfig)
+    .run(function($rootScope, $location, Auth) {
+        'ngInject';
+        // Redirect to login if route requires auth and you're not logged in
 
-    $rootScope.$on('$stateChangeStart', function(event, next) {
-      Auth.isLoggedIn(function(loggedIn) {
-        if (next.authenticate && !loggedIn) {
-          $location.path('/login');
-        }
-      });
-    });
-  })
-  .controller('pagerCtrl', ['', function(){
+        $rootScope.$on('$stateChangeStart', function(event, next) {
+            Auth.isLoggedIn(function(loggedIn) {
+                if (next.authenticate && !loggedIn) {
+                    $location.path('/login');
+                }
+            });
+        });
+    })
+    .controller('pagerCtrl', ['', function() {
 
-  }]);
+    }]);
 
 angular.element(document)
-  .ready(() => {
-    angular.bootstrap(document, ['aliaApp'], {
-      strictDi: true
+    .ready(() => {
+        angular.bootstrap(document, ['aliaApp'], {
+            strictDi: true
+        });
     });
-  });

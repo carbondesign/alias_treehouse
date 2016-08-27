@@ -9,7 +9,9 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 /**
  * App-wide Styles
  */
-
+p{
+	font-size: 16px;
+}
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
@@ -24,12 +26,16 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 
 #footer {
     position: fixed;
-    bottom: -20px;
+    bottom: -40px;
     left: 0px;
     width: 100%;
     background-color: #fff;
     box-shadow: 1px 1px 1px 1px #333;
     z-index: 3;
+    background-color: #343838;
+    hr{
+    	border-color: #666
+    }
 }
 
 #pager {
@@ -38,12 +44,25 @@ $fa-font-path: '/assets/fonts/font-awesome/';
     top: 10px;
     right: 40px;
 }
+.jumbotron{
+	background-color: white;
+	box-shadow: 0 0 4px #565656;
+	h1{
+		color: #009bc1;
+	}
+
+}
+h2{
+	margin-top: 0px
+}
 
 // Component styles are injected through gulp
 
 /* inject:scss */
 
 @import 'admin/admin';
+
+@import 'components/cloud/cloud';
 
 @import 'components/codeeditor/codeeditor';
 
@@ -71,6 +90,9 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 
 /* endinject */
 
+.relative{
+	position: relative;
+}
 .pager {
     margin: 5px 0;
 }
@@ -140,4 +162,8 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 
 .m_T-0 {
     margin-top: 0px;
+}
+.background-image, .background-image .comic-panel{
+	background-color: transparent !important;
+
 }
