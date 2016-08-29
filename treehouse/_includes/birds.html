@@ -23,8 +23,8 @@
 		Best in Chrome / Safari
 		*/
 
-		var appHeight = 400,
-		    appWidth = 840,
+		var appHeight = 600,
+		    appWidth = 1000,
 		    appCenterX = appWidth/2,
 		    appCenterY = appHeight/2,
 		    stage = new Kinetic.Stage({
@@ -37,13 +37,13 @@
 		    tl;
 
 		stage.add(layer);
-		bugFile.src = "http://www.greensock.com/_img/codepen/bezierCreature/creature.png";
+		bugFile.src = "../images/bird.png";
 
 		function getAnimation() {
 		  var creature = new Kinetic.Image({
 		    image: bugFile,
-		    width:27,
-		    height:29,
+		    width:50,
+		    height:50,
 		    x:-50
 		  });
 

@@ -9,3 +9,14 @@
 .site-header{
 	background-color: white;
 }
+#poster{
+	padding:10px;
+	background-image: url("/images/posterpaper.jpg");
+	background-size: cover;
+	h1 {
+	    font-size: 14px;
+	    font-weight: bold;
+
+	}
+
+}

@@ -7,3 +7,19 @@
     width: 500px;
     height: 400px;
 }
+#results {
+    height: 400px;
+    background-color: white;
+    #content{
+    	background-image: url(../assets/images/posterpaper.jpg);
+    	left: 25%;
+    	top:30px;
+    	position: absolute;
+    	font-family: 'Open Sans'
+    }
+}
+.btn, ul#pager a{
+	background-color: #555;
+	border-color: #888;
+	color: #ddd;
+}

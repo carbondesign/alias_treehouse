@@ -1,14 +1,27 @@
 <div class="codeEditor p_All-2x">
-    <button type="button" class="btn btn-default" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">Show Code Editor</button>
+    <button type="button" class="btn btn-default"  ng-class="$ctrl.isCollapsed ? '':'hide'"  ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">Show Code Editor</button>
+    <button type="button" class="btn btn-default" ng-class="$ctrl.isCollapsed ? 'hide':''" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">Hide Editor</button>
     <hr>
     <div uib-collapse="$ctrl.isCollapsed">
         <!-- <iframe id="codepen" height='400' scrolling='no' src='//codepen.io/stix/embed/dXLKRA/?height=265&theme-id=light&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe> -->
 	    <!--  <iframe height='500' scrolling='no' src='//codepen.io/carbondesign/embed/qNZRgz/?height=265&theme-id=light&default-tab=html,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'> </iframe> -->
 
-	    <div style="height:500px">
-	    	<pre  class="col-lg-6" id="editor">xxx</pre>
-	    	<div  class="col-lg-6" id="results"></div>
+	    <div style="height:500px" >
+	    	<div class="col-lg-6">
+	    		<button class="btn-primary btn pull-right" ng-click="$ctrl.saveFile()">Save</button>
+	    		<pre id="editor">
+	    		</pre>
+	    	</div>
+	    	<div class="col-lg-6">
+	    		<div id="results">
+	    			<div id="poster_code" style="border: thin solid #000">
+						<div id="content"></div>
+	    			</div>
+	    		</div>
+	    	</div>
 	    </div>
+
+
 
 	    <script>
 
