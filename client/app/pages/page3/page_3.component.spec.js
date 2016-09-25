@@ -2,7 +2,7 @@
 
 describe('Component: Page3Component', function() {
 	// load the controller's module
-	beforeEach(module('aliaApp.page_3'));
+	beforeEach(module('alikaApp.page_3'));
 
 	var Page3Component;
 

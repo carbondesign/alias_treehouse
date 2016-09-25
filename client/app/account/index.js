@@ -10,16 +10,16 @@ import settings from './settings';
 import signup from './signup';
 import oauthButtons from '../../components/oauth-buttons';
 
-export default angular.module('aliaApp.account', [uiRouter, login, settings, signup, oauthButtons])
-    .config(routing)
-    .run(function($rootScope) {
-        'ngInject';
+export default angular.module('alikaApp.account', [uiRouter, login, settings, signup, oauthButtons])
+	.config(routing)
+	.run(function($rootScope) {
+		'ngInject';
 
-        $rootScope.$on('$stateChangeStart', function(event, next, nextParams, current) {
-            if (next.name === 'logout' && current && current.name && !current.authenticate) {
-                next.referrer = current.name;
-            }
-        });
-    })
-    .name;
+		$rootScope.$on('$stateChangeStart', function(event, next, nextParams, current) {
+			if (next.name === 'logout' && current && current.name && !current.authenticate) {
+				next.referrer = current.name;
+			}
+		});
+	})
+	.name;
 

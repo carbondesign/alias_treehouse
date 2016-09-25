@@ -15,7 +15,7 @@ export class MainController {
 
 }
 
-export default angular.module('aliaApp.main', [uiRouter, ngAnimate, comicPanel, codeEditor, talkbubble, sequentialTransition, fadeTransition, cloud])
+export default angular.module('alikaApp.main', [uiRouter, ngAnimate, comicPanel, codeEditor, talkbubble, sequentialTransition, fadeTransition, cloud])
     .config(routing)
     .component('main', {
         template: require('./main.html'),

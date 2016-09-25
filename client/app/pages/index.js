@@ -9,7 +9,7 @@ import page1 from './page1';
 import page2 from './page2';
 import page3 from './page3';
 
-export default angular.module('aliaApp.pages', [uiRouter, page1, page2, page3])
+export default angular.module('alikaApp.pages', [uiRouter, page1, page2, page3])
     .config(routing)
     .run(function() {
         // 'ngInject';

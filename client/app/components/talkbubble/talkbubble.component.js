@@ -2,25 +2,25 @@
 const angular = require('angular');
 
 export class talkbubbleComponent {
-    /*@ngInject*/
+	/*@ngInject*/
 }
 
-export default angular.module('aliaApp.talkbubble', [])
-    .directive('talkbubble', function() {
-        return {
-            template: require('./talkbubble.html'),
-            restrict: 'E',
-            transclude: true,
-            replace: true,
-            scope: {
-			    user: '=',
-			    width: '=',
-			    height: '=',
-			    top: '=',
-			    left: '=',
-			    tail: '=',
-			    zindex: '@'
+export default angular.module('alikaApp.talkbubble', [])
+	.directive('talkbubble', function() {
+		return {
+			template: require('./talkbubble.html'),
+			restrict: 'E',
+			transclude: true,
+			replace: true,
+			scope: {
+				user: '=',
+				width: '=',
+				height: '=',
+				top: '=',
+				left: '=',
+				tail: '=',
+				zindex: '@'
 			}
-        };
-    })
-    .name;
+		};
+	})
+	.name;

@@ -6,7 +6,7 @@ export function OauthButtonsController($window) {
   };
 }
 
-export default angular.module('aliaApp.oauthButtons', [])
+export default angular.module('alikaApp.oauthButtons', [])
   .directive('oauthButtons', function() {
     return {
       template: require('./oauth-buttons.html'),

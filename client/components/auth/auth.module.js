@@ -5,30 +5,30 @@ import constants from '../../app/app.constants';
 import util from '../util/util.module';
 import ngCookies from 'angular-cookies';
 import {
-  authInterceptor
+	authInterceptor
 } from './interceptor.service';
 import {
-  routerDecorator
+	routerDecorator
 } from './router.decorator';
 import {
-  AuthService
+	AuthService
 } from './auth.service';
 import {
-  UserResource
+	UserResource
 } from './user.service';
 
 import uiRouter from 'angular-ui-router';
 
 function addInterceptor($httpProvider) {
-  'ngInject';
+	'ngInject';
 
-  $httpProvider.interceptors.push('authInterceptor');
+	$httpProvider.interceptors.push('authInterceptor');
 }
 
-export default angular.module('aliaApp.auth', [constants, util, ngCookies, uiRouter])
-  .factory('authInterceptor', authInterceptor)
-  .run(routerDecorator)
-  .factory('Auth', AuthService)
-  .factory('User', UserResource)
-  .config(['$httpProvider', addInterceptor])
-  .name;
+export default angular.module('alikaApp.auth', [constants, util, ngCookies, uiRouter])
+	.factory('authInterceptor', authInterceptor)
+	.run(routerDecorator)
+	.factory('Auth', AuthService)
+	.factory('User', UserResource)
+	.config(['$httpProvider', addInterceptor])
+	.name;

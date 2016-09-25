@@ -2,7 +2,7 @@
 
 describe('Component: codeeditor', function() {
 	// load the component's module
-	beforeEach(module('aliaApp.codeeditor'));
+	beforeEach(module('alikaApp.codeeditor'));
 
 	var codeeditorComponent;
 

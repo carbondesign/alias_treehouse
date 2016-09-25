@@ -8,7 +8,7 @@ export class comicPanelComponent {
 	}
 }
 
-export default angular.module('aliaApp.comicpanel', [])
+export default angular.module('alikaApp.comicpanel', [])
 	.component('comicpanel', {
 		template: require('./comicPanel.html'),
 		selector: 'comicpanel',

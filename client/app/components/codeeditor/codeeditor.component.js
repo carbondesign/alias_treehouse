@@ -2,7 +2,7 @@
 const angular = require('angular');
 import filesaver from 'file-saver'
 
-export default angular.module('aliaApp.codeeditor', [])
+export default angular.module('alikaApp.codeeditor', [])
     .component('codeeditor', {
         template: require('./codeeditor.html'),
         controller: function() {

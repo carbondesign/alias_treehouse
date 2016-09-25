@@ -30,7 +30,7 @@ import codeEditor from './components/codeeditor/codeeditor.component'
 import pages from './pages';
 import './app.scss';
 
-angular.module('aliaApp', [
+angular.module('alikaApp', [
         ngAnimate,
         ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter, uiBootstrap,
         // ngMessages,
@@ -57,7 +57,7 @@ angular.module('aliaApp', [
 
 angular.element(document)
     .ready(() => {
-        angular.bootstrap(document, ['aliaApp'], {
+        angular.bootstrap(document, ['alikaApp'], {
             strictDi: true
         });
     });

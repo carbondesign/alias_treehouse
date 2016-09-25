@@ -2,7 +2,7 @@
 
 describe('Component: comicPanel', function() {
 	// load the component's module
-	beforeEach(module('aliaApp.comicPanel'));
+	beforeEach(module('alikaApp.comicPanel'));
 
 	var comicPanelComponent;
 
