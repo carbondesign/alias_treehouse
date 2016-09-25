@@ -1,6 +1,6 @@
 'use strict';
 const angular = require('angular');
-import filesaver from 'file-saver'
+import filesaver from 'file-saver';
 
 export default angular.module('alikaApp.codeeditor', [])
     .component('codeeditor', {
